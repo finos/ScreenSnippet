@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lneir/ScreenSnippet.git"
+    "url": "git+https://github.com/symphonyoss/ScreenSnippet.git"
   },
   "author": "symphony",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lneir/ScreenSnippet/issues"
+    "url": "https://github.com/symphonyoss/ScreenSnippet/issues"
   },
-  "homepage": "https://github.com/lneir/ScreenSnippet#readme",
+  "homepage": "https://github.com/symphonyoss/ScreenSnippet#readme",
   "os": "win32"
 }
