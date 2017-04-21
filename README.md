@@ -8,3 +8,6 @@ ScreenSnippet.exe filename
 (filename where the saved jpeg output will go)
 
 Application will abort snippet and close if esc is pressed.
+
+# Notes:
+preinstall script in package.json will build release version of package.  msbuild must be in path to build.
