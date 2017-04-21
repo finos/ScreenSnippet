@@ -1,0 +1,21 @@
+{
+  "name": "screen-snippet",
+  "version": "1.0.0",
+  "description": "screen snippet util for windows",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npm run build",
+    "build": "msbuild ScreenSnippet.sln /t:rebuild /p:Configuration=Release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lneir/ScreenSnippet.git"
+  },
+  "author": "symphony",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lneir/ScreenSnippet/issues"
+  },
+  "homepage": "https://github.com/lneir/ScreenSnippet#readme",
+  "os": "win32"
+}
