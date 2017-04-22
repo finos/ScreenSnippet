@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npm run build",
-    "build": "msbuild ScreenSnippet.sln /t:rebuild /p:Configuration=Release"
+    "build": "MSBuild.exe ScreenSnippet.sln /t:rebuild /p:Configuration=Release"
   },
   "repository": {
     "type": "git",
