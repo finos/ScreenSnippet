@@ -9,5 +9,5 @@ ScreenSnippet.exe filename
 
 Application will abort snippet and close if esc is pressed.
 
-# Notes:
-preinstall script in package.json will build release version of package.  msbuild must be in path to build.
+# Dev Env Notes:
+preinstall script in package.json will build release version of package.  MSBuild.exe must be in path to build.  MSBuild.exe is available when installing Visual Studio.  Has been tested with Visual Studio 2007 Community Edition.
