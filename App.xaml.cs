@@ -1,7 +1,6 @@
 ﻿using Paragon.Plugins.ScreenCapture;
 using System;
-using System.Diagnostics;
-using System.Reflection;
+using System.Linq;
 using System.Windows;
 
 namespace ScreenSnippet
@@ -10,10 +9,17 @@ namespace ScreenSnippet
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            // mandatory filename arg - grabbed output will write to this file.
-            if (e.Args.Length == 1 && !string.IsNullOrEmpty(e.Args[0]))
+            string[] availableLocale = { "en-US", "ja-JP" };
+
+            string filename = (e.Args.Length >= 1 && !string.IsNullOrEmpty(e.Args[0])) ? e.Args[0] : null;
+            string locale = (e.Args.Length == 2 && !string.IsNullOrEmpty(e.Args[1])) ? e.Args[1] : null;
+
+            if (filename != null)
             {
-                string filename = e.Args[0];
+                if (locale != null && availableLocale.Contains(locale))
+                {
+                    System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(locale);
+                }
                 SnippingWindow win = new SnippingWindow(filename);
                 win.Show();
             }
