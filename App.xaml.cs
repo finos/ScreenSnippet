@@ -9,7 +9,7 @@ namespace ScreenSnippet
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            string[] availableLocale = { "en-US", "ja-JP" };
+            string[] availableLocale = { "en-US", "ja-JP", "fr-FR" };
 
             string filename = (e.Args.Length >= 1 && !string.IsNullOrEmpty(e.Args[0])) ? e.Args[0] : null;
             string locale = (e.Args.Length == 2 && !string.IsNullOrEmpty(e.Args[1])) ? e.Args[1] : null;
