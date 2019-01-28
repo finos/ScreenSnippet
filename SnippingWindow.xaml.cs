@@ -76,8 +76,12 @@ namespace Paragon.Plugins.ScreenCapture
             rect.X = rect.Left - 80 + SystemInformation.VirtualScreen.Left;
 
             var screen = Screen.GetBounds(rect);
-            Top = top < screen.Top ? screen.Top : top;
-            Left = left < screen.Left ? screen.Left : left;
+            Matrix m = System.Windows.PresentationSource.FromVisual(this).CompositionTarget.TransformToDevice;
+            double dx = m.M11;
+            double dy = m.M22;
+
+            Top = top < screen.Top ? (screen.Top / dy) : (top / dy);
+            Left = left < screen.Left ? (screen.Left / dx) : (left / dx);
 
             var image = result.Image;
 
