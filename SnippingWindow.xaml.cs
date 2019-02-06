@@ -163,10 +163,10 @@ namespace Paragon.Plugins.ScreenCapture
 
                 using (var fileStream = new FileStream(outputFilename, FileMode.Create))
                 {
-                    var jpegEncoder = new JpegBitmapEncoder();
-                    jpegEncoder.QualityLevel = 70;
-                    jpegEncoder.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
-                    jpegEncoder.Save(fileStream);
+                    PngBitmapEncoder encoder = new PngBitmapEncoder();
+                    encoder.Interlace = PngInterlaceOption.On;
+                    encoder.Frames.Add(BitmapFrame.Create(renderTargetBitmap));
+                    encoder.Save(fileStream);
                 }
             }
             finally
