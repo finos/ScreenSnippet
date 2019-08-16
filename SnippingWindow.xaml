@@ -5,7 +5,8 @@
         Title="{x:Static p:Resources.Title}"
         Height="300" Width="500"
         WindowStyle="ToolWindow"
-        WindowState="Minimized">
+        WindowState="Minimized"
+        Topmost="True">
     <Window.Resources>
         <x:Array x:Key="PenColors" x:Type="{x:Type DrawingAttributes}">
             <DrawingAttributes Color="Black" Width="5" Height="5"/>

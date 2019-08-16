@@ -1,4 +1,4 @@
-﻿//Licensed to the Apache Software Foundation(ASF) under one
+//Licensed to the Apache Software Foundation(ASF) under one
 //or more contributor license agreements.See the NOTICE file
 //distributed with this work for additional information
 //regarding copyright ownership.The ASF licenses this file
@@ -45,9 +45,18 @@ namespace Paragon.Plugins.ScreenCapture
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // SnippingTool
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "SnippingTool";
             this.Text = "SnippingTool";
+            this.TopMost = true;
+            this.ResumeLayout(false);
+
         }
 
         #endregion
